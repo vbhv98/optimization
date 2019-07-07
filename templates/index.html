@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Optimizer</title>
+        <link rel="stylesheet" href={{ url_for('static', filename='css/style.css')
+
+
+
+
+        }}>
+    </head>
+    <body>
+        <div class="wrapper">
+            <label for="excel_data">Paste Excel Data here: </label>
+            <textarea
+                value="Sr No	Window width	Qty	Window Height 	Qty
+            W1	2435	2	1645	2
+            W2	2435	2	1670	2
+            W5	1732	2	503	2
+            W10	2352	2	1949	2
+            W11	2356	2	1932	2
+            W12	2383	2	1729	2
+            W15 A	2395	3	1695	3
+            W16	2405	4	1595	4
+            W19	1450	5	1692	5
+            W20	1441	6	1681	6
+            W26	834	7	1260	7
+            W27	860	8	1263	8
+            W34	1767	9	1203	9
+            W36	2958	10	1215	10
+            W23	2945	11	1675	11"
+                name="excel_data"
+                id="excel_data"
+                style="width:250px;height:150px;"
+            ></textarea>
+            <label for="length">Profile Length: </label>
+            <input type="number" value="4800" name="length" id="length" />
+            <br />
+            <input type="button" onclick="javascript:generateTable()" value="Genereate Table" />
+            <br /><br />
+            <p>Table data will appear below</p>
+            <button id="submit">Submit</button>
+            <hr />
+            <div id="excel_table"></div>
+            <div id="result"></div>
+        </div>
+        <script src="{{url_for('static', filename='js/index.js')}}"></script>
+    </body>
+</html>
